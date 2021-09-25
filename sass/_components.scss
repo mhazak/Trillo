@@ -54,9 +54,11 @@
 // side navigation
 .side-nav {
 
-    &__item {}
-    &__link {}
-    &__icon { width: 1.75rem; height: 1.75rem; }
+    list-style: none; font-size: 1.4rem; margin-top: 3.5rem;
+    &__link:link,
+    &__link:visited { color: var(--color-grey-light-1); text-decoration: none; text-transform: uppercase; display: flex; align-items: center; padding: 1.5rem 3rem; }
+    &__link:hover {}
+    &__icon { width: 1.75rem; height: 1.75rem; margin-right: 2rem; fill: currentColor; }
 
 }
 
