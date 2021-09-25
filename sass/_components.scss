@@ -123,8 +123,15 @@
 .btn-inline { 
 	
 	border: none; border-bottom: 1px solid currentColor; background-color: transparent; color: var(--color-primary); font-size: inherit; padding-bottom: 2px; display: inline-block; cursor: pointer; transition: .2s;
-	
-	&:hover { color: var(--color-grey-dark-1); }
+
+	& span { margin-left: 3px; transition: margin-left .2s; }
+
+	&:hover { 
+
+		color: var(--color-grey-dark-1);
+		
+		span { margin-left: 8px; }
+	}
 
 	&:focus { outline: none; animation: pulstate 1s infinite; }
 	
@@ -163,4 +170,26 @@
 	
 		&:not(:last-child) { margin-right: -1.5rem; }
 	}
+}
+
+// user reviews on hotel
+.review {
+
+	background-color: #fff; box-shadow: var(--shadow-light); padding: 3rem; margin-bottom: 3.5rem; position: relative; overflow: hidden;
+	
+	&__text { z-index: 10; position: relative; }
+	
+	&__user { display: flex; align-items: center; margin: 2.5rem 0; }
+	
+	&__photo { height: 4.5rem; width: 4.5rem; border-radius: 50%; margin-right: 1.5rem; }
+	&__user-box { margin-right: auto; }
+	&__user-name { text-transform: uppercase; font-weight: 800; }
+	&__user-date { font-size: 1rem; font-weight: 100; }
+	&__rating { color: var(--color-primary); font-size: 2.2rem; font-weight: 100; }
+
+	&::before { 
+		content: "\201C"; position: absolute; top: -2.75rem; left: -1rem; font-size: 20rem; color: var(--color-grey-light-2); font-family: sans-serif; line-height: 1; 
+		z-index: 1;
+	}
+
 }
