@@ -10,11 +10,17 @@
 		
 		<title>trillo &mdash; Your all-in-one booking app</title>
 	</head>
+
 	<body>
 		<div class="container">
+			
+			<!-- header navigation -->
 			<header class="header">
+				
+				<!-- web logo -->
 				<img src="img/logo.png" alt="trillo logo" class="logo">
 
+				<!-- hotels search box form -->
 				<form action="#" class="search">
 					<input type="text" class="search__input" placeholder="Search hotels">
 					<button class="search__button">
@@ -24,24 +30,34 @@
 					</button>
 				</form>
 
+				<!-- users notification panel -->
 				<nav class="user-nav">
 					
+					<!-- bookmark icon -->
 					<div class="user-nav__icon-box">
 						<svg class="user-nav__icon">
 							<use xlink:href="img/sprite.svg#icon-bookmark"></use>
 						</svg>
+						
+						<!-- bookmarks notification -->
 						<span class="user-nav__notification">7</span>
 					</div>
 
+					<!-- messages -->
 					<div class="user-nav__icon-box">
 						<svg class="user-nav__icon">
 							<use xlink:href="img/sprite.svg#icon-chat"></use>
 						</svg>
+
+						<!-- messages notification -->
 						<span class="user-nav__notification">13</span>
 					</div>
 
+					<!-- user's picture box -->
 					<div class="user-nav__user">
 						<img src="img/user.jpg" alt="User photo" class="user-nav__user-photo">
+						
+						<!-- user's name -->
 						<span class="user-nav__user-name">Marek</span>
 					</div>
 
@@ -49,11 +65,15 @@
 
 			</header>
 			
+			<!-- main content div under header -->
 			<div class="content">
+				
+				<!-- side navigation -->
 				<nav class="sidebar">
 					
 					<ul class="side-nav">
 
+						<!-- hotel -->
 						<li class="side-nav__item side-nav__item--active">
 							<a href="#" class="side-nav__link">
 								<svg class="side-nav__icon">
@@ -63,6 +83,7 @@
 							</a>
 						</li>
 
+						<!-- flight -->
 						<li class="side-nav__item">
 							<a href="#" class="side-nav__link">
 								<svg class="side-nav__icon">
@@ -72,6 +93,7 @@
 							</a>
 						</li>
 
+						<!-- car rental -->
 						<li class="side-nav__item">
 							<a href="#" class="side-nav__link">
 								<svg class="side-nav__icon">
@@ -81,6 +103,7 @@
 							</a>
 						</li>
 
+						<!-- tours -->
 						<li class="side-nav__item">
 							<a href="#" class="side-nav__link">
 								<svg class="side-nav__icon">
@@ -92,13 +115,79 @@
 
 					</ul>
 
+					<!-- copyright -->
 					<div class="legal">
 						&copy; 2017 by trillo. All right reserved.
 					</div>
+
 				</nav>
 				
+				<!-- content part about hotel -->
 				<main class="hotel-view">
-					Hotel view
+					
+					<!-- hotel gallery -->
+					<div class="gallery">
+
+						<figure class="gallery__item">
+							<img src="img/hotel-1.jpg" alt="Photo of hotel 1" class="gallery__photo">
+						</figure>
+
+						<figure class="gallery__item">
+							<img src="img/hotel-2.jpg" alt="Photo of hotel 2" class="gallery__photo">
+						</figure>
+
+						<figure class="gallery__item">
+							<img src="img/hotel-3.jpg" alt="Photo of hotel 3" class="gallery__photo">
+						</figure>
+
+					</div>
+
+					<!-- hotel overview -->
+					<div class="overview">
+						
+						<!-- hotel name -->
+						<h1 class="overview__heading">Hotel Las Palmas</h1>
+
+						<!-- hotel rating -->
+						<div class="overview__stars">
+
+							<!-- number of stars -->
+							<svg class="overview__icon-star">
+								<use xlink:href="img/sprite.svg#icon-star"></use>
+							</svg>
+							<svg class="overview__icon-star">
+								<use xlink:href="img/sprite.svg#icon-star"></use>
+							</svg>
+							<svg class="overview__icon-star">
+								<use xlink:href="img/sprite.svg#icon-star"></use>
+							</svg>
+							<svg class="overview__icon-star">
+								<use xlink:href="img/sprite.svg#icon-star"></use>
+							</svg>
+							<svg class="overview__icon-star">
+								<use xlink:href="img/sprite.svg#icon-star"></use>
+							</svg>
+						</div>
+
+						<!-- hotel location -->
+						<div class="overview__location">
+							
+							<!-- location icon -->
+							<svg class="overview__icon-location">
+								<use xlink:href="img/sprite.svg#icon-location"></use>
+							</svg>
+
+							<!-- hotel's city name -->
+							<button class="btn-inline">Albufeira, Portugal</button>
+
+							<!-- hotel's rating -->
+							<div class="overview__rating">
+								<div class="overview__rating-average">8.6</div>
+								<div class="overview__rating-count">429 votes</div>
+							</div>
+						</div>
+
+					</div>
 				</main>
 			</div>
 
