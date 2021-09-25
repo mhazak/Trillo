@@ -7,4 +7,10 @@
 // flex: 0 => grow 0 => shrink 18% => width
 .sidebar { background-color: var(--color-grey-dark-1); flex: 0 0 18%; display: flex; flex-direction: column; justify-content: space-between; }
 
-.hotel-view { background-color: #fff; flex: 1; height: 110rem; }
+.hotel-view { background-color: #fff; flex: 1; }
+
+.detail { display: flex; padding: 4.5rem; background-color: var(--color-grey-light-1); border-bottom: 1px var(--line); }
+
+.description { font-size: 1.4rem; flex: 0 0 60%; margin-right: 4.5rem; padding: 3rem; background-color: #fff; box-shadow: var(--shadow-light); }
+
+.user-reviews { flex: 1; }
