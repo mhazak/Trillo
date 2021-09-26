@@ -35,6 +35,10 @@ Grey dark 3: #999
     --line: 1px solid var(--color-grey-light-2);
 
 }
+
+$bp-largest: 75em; // 1200px /16 = 75em
+$bp-large: 68.75em; // 1100px /16 = 68.75em
+$bp-medium: 50em; // 800px / 16 = 50em
 * { margin: 0; padding: 0; }
 
 *,
@@ -42,7 +46,13 @@ Grey dark 3: #999
 *::after { box-sizing: inherit; }
 
 // 1 rem = 10px 10px/16px = 62.5%
-html { box-sizing: border-box; font-size: 62.5%; }
+html { 
+    box-sizing: border-box; font-size: 62.5%; 
+
+    @media only screen and (max-width: $bp-large) {
+        font-style: 50%;
+    }
+}
 
 // if Open Sans fails, read sans-serif
 body { 

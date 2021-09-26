@@ -55,10 +55,27 @@
 .side-nav {
 
 	list-style: none; font-size: 1.4rem; margin-top: 3.5rem;
+
+	@media only screen and (max-width: $bp-large) {
+		display: flex; margin: 0; justify-content: center;
+	}
 	
 	&__item { 
 		position: relative; 
-		&:not(:last-child) { margin-bottom: .5rem;}
+		
+		&:not(:last-child) { 
+			
+			margin-bottom: .5rem; 
+		
+			@media only screen and (max-width: $bp-large) {
+				margin: 0;
+			}
+		}
+
+		// maximaze all items 
+		@media only screen and (max-width: $bp-large) {
+			flex: 1;
+		}
 	}
 
 	&__item::before { 
@@ -76,7 +93,12 @@
 
 	&__link:link,
 	&__link:visited { 
+		
 		color: var(--color-grey-light-1); text-decoration: none; text-transform: uppercase; display: flex; align-items: center; padding: 1.5rem 3rem; position: relative; z-index: 10;
+		
+		@media only screen and (max-width: $bp-large) {
+			justify-content: center; padding: 2rem;
+		}
 	}
 	
 	&__icon { width: 1.75rem; height: 1.75rem; margin-right: 2rem; fill: currentColor; }
@@ -84,7 +106,13 @@
 }
 
 // copyright
-.legal { font-size: 1.2rem; text-align: center; color: var(--color-grey-light-4); padding: 2.5rem; }
+.legal { 
+	font-size: 1.2rem; text-align: center; color: var(--color-grey-light-4); padding: 2.5rem; 
+
+	@media only screen and (max-width: $bp-large) {
+        display: none;
+    }
+}
 
 // hotel photo at the top
 .gallery {
@@ -161,14 +189,23 @@
 }
 
 .recommend { 
+
 	font-size: 1.3rem; color: var(--color-primary); display: flex; align-items: center;
 
+	
+	&__friends { display: flex; }
+	
 	&__count { margin-right: auto; }
-
+	
 	&__photo { 
 		box-sizing: content-box; height: 4rem; width: 4rem; border-radius: 50%; border: 3px solid #fff;
-	
-		&:not(:last-child) { margin-right: -1.5rem; }
+		
+		&:not(:last-child) { margin-right: -2rem; }
+	}
+
+	@media only screen and (max-width: $bp-medium) {
+		flex-direction: column; justify-content: center;
+		&__count { margin-right: 0; margin-bottom: 1rem; }
 	}
 }
 
@@ -176,6 +213,10 @@
 .review {
 
 	background-color: #fff; box-shadow: var(--shadow-light); padding: 3rem; margin-bottom: 3.5rem; position: relative; overflow: hidden;
+
+	@media only screen and (max-width: $bp-large) {
+		padding: 2rem; margin-right: 3rem;
+	}
 	
 	&__text { z-index: 10; position: relative; }
 	
@@ -198,6 +239,10 @@
 .cta {
 
 	padding: 3.5rem 0; text-align: center;
+
+	@media only screen and (max-width: $bp-large) {
+		padding: 2.5rem 0;
+	}
 
 	&__book-now { text-transform: uppercase; font-size: 1.5rem; font-weight: 300; margin-bottom: 2.5rem; }
 }
